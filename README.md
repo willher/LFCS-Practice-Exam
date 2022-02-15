@@ -8,6 +8,7 @@
 3. The LFCS exam grades you on the results of your efforts not how you go about acheiving them so there is often more than one way to answer any question
 4. While I did my best to provide accurate explinations and answers, please, review and understand the commands used as I did not score perfectly on the exam so some content may not be complete
 5. Do ***not*** just memorize the commands and flags used in the practice exam as you will need to understand the content and be able to use other flags and commands during your exam
+6. The format of the questions follow the exam.  Often questions will contain background information that is not super relivent and be multi-part, while others are very small and direct
 
 ## General Exam Tips
 
