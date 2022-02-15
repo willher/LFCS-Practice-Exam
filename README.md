@@ -33,4 +33,6 @@ However, I want to avoid adding content that was not specifically on the LFCS ex
 
 If you have any questions about exam content, repo content, or if you have any issues using the practice exam please reach out ot me on Slack, Teams, or by email
 
-Willis Hertweck, willis.hertweck@cdw.com  Good luck and enjoy learning and practicing Linux. 
+Willis Hertweck, willis.hertweck@cdw.com  
+
+Good luck and enjoy learning and practicing Linux!
