@@ -26,8 +26,8 @@ Please note some of the networking behavior of your VM may be different or uncha
 This repo is meant to serve as a living and evolving knowledge bank for the ACE program, but it is also meant to be as coincise as possible
 
 I encourage anyone who uses the repo and takes the LFCS to go back and review the content in the practice exam and offer enhancements whereever possible
-H
-owever, I want to avoid adding content that was not specifically on the LFCS exam as the breath of possible Linux questions can be overwhelming while preparing for the LFCS
+
+However, I want to avoid adding content that was not specifically on the LFCS exam as the breath of possible Linux questions can be overwhelming while preparing for the LFCS
 
 ## Questions about the repo
 
