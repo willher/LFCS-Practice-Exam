@@ -10,6 +10,6 @@
 #  	iii. Give it a label ‘lv01’
 #  	iv. Mount it persistently to /mnt 
 #
-#  ***You will need to add an additional disk to your VM; however, the exam will specify which disk to use
+#  ***NOTE: You will need to add an additional disk to your VM; however, the exam will specify which disk to use
 #
 #  --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------   
