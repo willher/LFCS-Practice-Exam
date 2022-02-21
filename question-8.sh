@@ -1,6 +1,6 @@
 # Automating routine system tasks using bash scripts can help system administrators complete routine tasks
 #
-# Write and run bash script to complete the following system exercises:
+#  Write and run bash script to complete the following system exercises:
 #	
 #      a. Create 2 files in a new directory called ‘manuals’ located in your home directory 
 #          i. Name the first file ‘sed-info’ and redirect the output of the ‘sed’ command man page to the contents of the file

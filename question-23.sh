@@ -1,9 +1,25 @@
 # Being able to quickly search files is an important task for system administrators
 #
-# Perform the following tasks
-#   1. Search /usr/grep/example1 for any lines that begin with the word World and append them to /usr/grep/output.txt
-#   2. Search /usr/grep/example2 for any lines that end with the word World and write them to /usr/grep/output2.txt overriding anything in the file
-#   3. Search /usr/grep/example3 for any lines that contain World and Earth and append them to /usr/grep/output3.txt
-#   4. Search /usr/grep/example4 for any lines that contain World or Earth and write them to /usr/grep/output4.txt overriding anything in the file
+#   Search the file example.txt for the follwoing and write them to  file.txt:
+#       a. all lines that end with the word linux
+#       b. all lines that start with the word Linux
+#       c. all lines with Linux and yay both in them.
+#       d. lines that contain linux or yay in them.
 #
-#---------------------------------------------------------------------------------------------------------------------------------------------------
+#--------------------------------------------------------------------------------------
+
+grep 'Linux$' example.txt > file.txt
+
+# '$' is the special character for end of line
+
+grep '^Linux' example.txt >> file.txt
+
+# '^' is the special character for start of line
+
+grep 'Linux' example.txt | grep 'yay' >> file.txt
+
+# you can pipe output from one grep into another to apply two filters
+
+grep 'Linux\|yay' example.txt >> file.txt 
+
+# '|' is the special character for or but must be escaped with a '\' so it's not interprated literally 

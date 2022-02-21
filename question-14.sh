@@ -15,4 +15,6 @@ vi /etc/crontab
 
 1 0 * */3 * root /srv/system/system-info 
 
-wq! 
+ZZ
+
+# writes changes and exits vim

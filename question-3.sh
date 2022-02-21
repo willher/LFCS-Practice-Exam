@@ -30,6 +30,8 @@ yum install firewalld
 
 systemctl enable firewalld
 
+# this enables firewalld so it starts automatically when the server restarts
+
 systemctl start firewalld
 
 # this starts firewalld and makes it automatically start on reboot

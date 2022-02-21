@@ -12,7 +12,8 @@
 
 ## General Exam Tips
 
-***ADD CONTENT HERE***
+1. Be the root user.  While this may not be a best practice in Linux it is very helpful for the exam.  Just be careful!!
+2. 
 
 ## Using the repo
 

@@ -20,3 +20,5 @@ Bob     hard    nproc   *
 # limits on users take precendence over limits on groups so Bob having a hard limit of * (default value) will override the limit set by developer group
 
 ZZ
+
+# writes changes and exits vim

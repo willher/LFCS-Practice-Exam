@@ -28,6 +28,8 @@ vi /etc/fstab
 
 /dev/sda /mnt ext4 defaults 0 0 
 
-# <path>    <mount point>   <file system type>  defaults    0   0   
+# <PATH> <MOUNT POINT> <FILE SYSTEM> defaults 0 0 
 
 ZZ
+
+# this writes the file and closes vim
