@@ -24,12 +24,24 @@ netstat -tulpn foo
 
 systemctl cat foo 
 
+# this will print helpful info about the service including the location of the config file and the start script
+
 vi /path/from/systemctl-cat/foo.conf 
+
+# this config file from our systemctl cat command will contain the default port
 
 systemctl cat foo
 
 #This will also contain the way to start foo
 
+/usr/bin/start_script
+
+# this script will be specified in the systemctl cat command
+
 ps -ef | grep foo 
 
+# this will get you the PID for the foo process that is running
+
 kill -s SIGHUP <foo PID> 
+
+# this will send the SIGHUP signal to foo 
