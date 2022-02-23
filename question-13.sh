@@ -7,7 +7,7 @@
 # 		iii. jlennon
 # 		iv. pmccartney
 # 		v. rstarr
-# 	b. Make linuxbro’s primary group ‘administrators’
+# 	b. Make linuxbro’s primary group admin
 # 	c. Make linuxbro’s default shell zsh 
 # 	d. Make a comment for the account linuxbro stating the user’s full name of “Linux Broman”
 # 	e. Make the accounts for jlennon and rstarr expire two years from today’s date
@@ -22,7 +22,7 @@ yum instll zsh
 
 # this makes the zsh shell avalible to users
 
-useradd -c "Linux Broman" -s /bin/zsh -g administrators linuxbro 
+useradd -c "Linux Broman" -s /bin/zsh -g admin linuxbro 
 
 # -c sets a comment -s sets the default shell -g sets default primary group **-d will set default home directory 
 

@@ -5,7 +5,11 @@
 # 3. Create a docker container 'docker3' ensuring it automatically restarts when the system reboots
 # 4.map port 80 on the container to 8080 on the local machine and use the latest version of nginx
 #
-# ***NOTE: yum install docker
+# ***NOTE: you will need to install, start, and run docker to do this live
+#               1. yum install docker
+#               2. docker container create --name docker1 -p 80:8080 --restart unless-stopped nginx
+#               3. docker container start docker01 
+#               4. docker container create --name docker2 -p 80:8080 --restart unless-stopped nginx
 # ---------------------------------------------------------------------------------------------------------------------------------------------------
 
 docker container ls 

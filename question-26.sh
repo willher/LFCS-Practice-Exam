@@ -1,4 +1,4 @@
-# a. Add Bob to the ACL for file.txt so he can read and write to it 
+# a. Add Bob to the ACL for /usr/acl/file.txt so he can read and write to it 
 # b. Remove Sue from the ACL for the file
 # c. Add group admin to the acl for the file with execute permissions
 # d. Delete /home/delete.me
