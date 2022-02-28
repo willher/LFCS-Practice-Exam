@@ -13,7 +13,12 @@
 ## General Exam Tips
 
 1. Be the root user.  While this may not be a best practice in Linux it is very helpful for the exam.  Just be careful!!
-2. 
+2. Read James Eiler's 'Exam-Template-Tips.pdf' which can be found in Teams
+3. Understand and use copy/past with ctrl + ins (or clicking) and shift + ins 
+4. Do not get hung up on a single question.  If a quick glance at man pages or --help doesn't jog your memory flag the qeustion, move on, and come back at the end
+5. Do Networking change questions last.  Most exams seem to have a question to change network configuration on a remote system.  Do this last in case you mess up and break the connection
+6. Check your work as you go.  Had to write an output to a file?  Cat the file to make sure it worked 
+7. Understand the power of grep.  Use it to quickly search man pages, and --help results  
 
 ## Using the repo
 
@@ -22,6 +27,12 @@ The repo contains practice questions with step-by-step answers with explinations
 This guide was written for CentOS Steam 8.  You will need to setup your own VMs with CentOS Stream 8 and copy and run the bash scripts to prepare your VM for each question.
 
 Please note some of the networking behavior of your VM may be different or unchangable if you are using a VM running in the cloud, but understanding the concepts should suffice. 
+
+The 'practice-exam' folder contains 26 questions which you should aim to comfortably answer in under (2) hours
+
+The 'additional-content' folder contains additional, less refined questions as well as a running list of commands / topics that I found helpful to review
+
+The setup.sh shell script can be copied to your VM and run from your home directory as root to set up the server for the practice exam
 
 ## Updating the repo
 
