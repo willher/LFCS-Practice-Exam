@@ -34,7 +34,7 @@ The 'additional-content' folder contains additional, less refined questions as w
 
 The setup.sh shell script can be copied to your VM and run from your home directory as root to set up the server for the practice exam
 
-To use the setup.sh shell script manually (not having to upload it to your vm), login to your vm and do the following
+To use the setup.sh shell script manually (not having to upload it to your vm), login to your vm and do the following after copying the contents of setup.sh from your code editor
 
     1. sudo su
     2. vi setup.sh
