@@ -1,25 +1,37 @@
-# Being able to quickly search files is an important task for system administrators
+# Create a 1GB SWAP file and add it to the exiting SWAP pool. Ensure it is mounted at boot.***
 #
-#   Search the file /usr/sample/example.txt for the follwoing and write them to file.txt:
-#       a. all lines that end with the word linux
-#       b. all lines that start with the word Linux
-#       c. all lines with Linux and yay both in them.
-#       d. lines that contain linux or yay in them.
+#***NOTE: understand the difference between Swap file and swap partition and be able to complete the above with both
 #
-#--------------------------------------------------------------------------------------
+#--------------------------------------------------------------------------------------------------------------------
 
-grep 'Linux$' example.txt > file.txt
+yum whatprovides fallocate 
 
-# '$' is the special character for end of line
+# this is a handy tool to create files of a specific size
 
-grep '^Linux' example.txt >> file.txt
+yum install util-linux
 
-# '^' is the special character for start of line
+# this installs the fallocate package
 
-grep 'Linux' example.txt | grep 'yay' >> file.txt
+fallocate -l 1G /root/sample.swp 
 
-# you can pipe output from one grep into another to apply two filters
+# this creates a file of size 1G at /root/sample.swp 
 
-grep 'Linux\|yay' example.txt >> file.txt 
+mkswap /root/sample.swp 
 
-# '|' is the special character for or but must be escaped with a '\' so it's not interprated literally 
+# this makes our new file a swap file
+
+swapon /root/sample.swp 
+
+# this turns on swap for this file
+
+vi /etc/fstab 
+
+# this file contains configuration for persistently configured drives
+
+/root/sample.swp none swap defaults 0 0 
+
+# <PATH> none swap defaults 0 0   ***NOTE: the none is because it has no mount point and it is type 'swap' 
+
+ZZ
+
+# writes changes and exits vim

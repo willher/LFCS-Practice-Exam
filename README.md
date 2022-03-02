@@ -34,6 +34,20 @@ The 'additional-content' folder contains additional, less refined questions as w
 
 The setup.sh shell script can be copied to your VM and run from your home directory as root to set up the server for the practice exam
 
+To use the setup.sh shell script manually (not having to upload it to your vm), login to your vm and do the following
+
+    1. sudo su
+    2. vi setup.sh
+    3. :set paste
+    4. i
+    5. shift + ins
+    6. [esc]
+    7. ZZ
+    8. chmod 777 setup.sh
+    9. ./setup.sh
+
+       ***NOTE: The script is interactive, you will need to aprove yum install packages and select a nginx image (i personally use the docker.io). It must be ran as ROOT
+
 ## Updating the repo
 
 This repo is meant to serve as a living and evolving knowledge bank for the ACE program, but it is also meant to be as coincise as possible

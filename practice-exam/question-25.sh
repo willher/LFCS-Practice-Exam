@@ -1,34 +1,38 @@
-# Identifying the difference between files and directories is a common system administrator task
+# a. Add Bob to the ACL for /usr/acl/file.txt so he can read and write to it 
+# b. Remove Sue from the ACL for the file
+# c. Add group admin to the acl for the file with execute permissions
+# d. Delete /home/delete.me
 #
-#   1. Find which files in /usr/diff/ is different and write the file name to a file /usr/diff/answer1 
-#   2. Find all of the files that are in /usr/diff/diff1 but not in /usr/diff/diff2 and write them to /usr/diff/answer2
-#
-#---------------------------------------------------------------------------------------------------------------------------------------------------
+#----------------------------------------------------------------------
 
-diff file1 file2
+getfacl file.txt 
 
-# check for any output
+# this lists the current ACL information for file.txt
 
-diff file1 file3
+setfacl -m u:Bob:rw file.txt 
 
-# there is likly a way to do this with a quick bash script; however with <tab> autocomplete I find this to be easy enough
+# this modifies the ACL for file.txt to add user Bob with rw permissions.  
 
-diff file1 file4
+setfacl -x u:Sue file.txt 
 
-# repeat until you get an output
+# this removes user Sue from the ACL for file.txt
 
-echo "file4" > /usr/diff/answer1 
+setfacl -m g:admin:x file.txt
 
-# this quickly writes file4 to the answer file 
+# this modifies the ACE for file.txt to add group admin to have execute permissons
 
-diff /usr/diff/diff1 /usr/diff/diff2 
+rm -rf /home/delete.me 
 
-# this will list all the files in either directory but not both
+# ***NOTE: You recieve an error that you do not have permissons to do this even ad ROOT!?
 
-echo "file1" > /usr/diff/answer2
+lsattr /home/delete.me 
 
-# writes the first different file to answer2 file
+# lists attributes on delete.me.  It has the 'i' attribute enables
 
-echo "file2" >> /usr/diff/answer2 
+chattr -i /home/delete.me 
 
-# appends the second different file to answer2 file
+# removes the 'i' attribute from delete.me
+
+rm -rf /home/delete.me
+
+# the command works now that the 'i' attribute is removed

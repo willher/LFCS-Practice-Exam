@@ -1,37 +1,34 @@
-# Create a 1GB SWAP file and add it to the exiting SWAP pool. Ensure it is mounted at boot.***
+# Identifying the difference between files and directories is a common system administrator task
 #
-#***NOTE: understand the difference between Swap file and swap partition and be able to complete the above with both
+#   1. Find which files in /usr/diff/ is different and write the file name to a file /usr/diff/answer1 
+#   2. Find all of the files that are in /usr/diff/diff1 but not in /usr/diff/diff2 and write them to /usr/diff/answer2
 #
-#--------------------------------------------------------------------------------------------------------------------
+#---------------------------------------------------------------------------------------------------------------------------------------------------
 
-yum whatprovides fallocate 
+diff file1 file2
 
-# this is a handy tool to create files of a specific size
+# check for any output
 
-yum install util-linux
+diff file1 file3
 
-# this installs the fallocate package
+# there is likly a way to do this with a quick bash script; however with <tab> autocomplete I find this to be easy enough
 
-fallocate -l 1G /root/sample.swp 
+diff file1 file4
 
-# this creates a file of size 1G at /root/sample.swp 
+# repeat until you get an output
 
-mkswap /root/sample.swp 
+echo "file4" > /usr/diff/answer1 
 
-# this makes our new file a swap file
+# this quickly writes file4 to the answer file 
 
-swapon /root/sample.swp 
+diff /usr/diff/diff1 /usr/diff/diff2 
 
-# this turns on swap for this file
+# this will list all the files in either directory but not both
 
-vi /etc/fstab 
+echo "file1" > /usr/diff/answer2
 
-# this file contains configuration for persistently configured drives
+# writes the first different file to answer2 file
 
-/root/sample.swp none swap defaults 0 0 
+echo "file2" >> /usr/diff/answer2 
 
-# <PATH> none swap defaults 0 0   ***NOTE: the none is because it has no mount point and it is type 'swap' 
-
-ZZ
-
-# writes changes and exits vim
+# appends the second different file to answer2 file

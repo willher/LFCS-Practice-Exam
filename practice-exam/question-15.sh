@@ -4,6 +4,7 @@
 #   b. that have the sgui enabled and append them to a file /home/example/answer2
 #   c. that are 126MB in size and append them to a file /home/example/answer3
 #   d. that are larger than 400kb and write them to a file /home/example/answer4 overriding anything that is currently there
+#   e. that have a .tar extention and haven't been accessed in more than 30 days
 #
 #---------------------------------------------------------------------------------------------------------------------------
 
@@ -36,3 +37,11 @@ find /home/example/ -size +400k -type f
 # finds all files bigger than 400kb
 
 find /home/example/ -size +400k -type f > /home/example/answer4 
+
+# finds all files bigger than 400kb and writes them to the file
+
+find /home/example -name *tar -atime +30 
+
+# finds all of the files ending in tar with an access time of more than 30 days
+
+find /home/example -name *tar -atime +30 > /home/example/answer5
