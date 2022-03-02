@@ -5,7 +5,6 @@
 # 3. Write the path that 'softlink2' in /usr/local/links resolves to
 # 4. Verify which file in /usr/local/links/hardlinks/ had the most hardlinks to it and write the number of hard links to a file called 'linknum' in /usr/local/links/hardlinks/ 
 #
-# ***NOTE ln -s /usr/local/links/hardlinkme.txt softlink2
 #-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 ln /usr/local/links/hardlinkme.txt hardlink1

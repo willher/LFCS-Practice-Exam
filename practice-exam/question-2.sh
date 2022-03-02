@@ -4,7 +4,6 @@
 # 1. Write the contents of the routing table to a file in /usr/local/networking/routing.txt 
 #
 # ***NOTE: for the purpose of the practice exam perform this locally, but ensure you are familiar with how to ssh to a remove server.
-# ***NOTE: there is no bash script for this questions.  You can perform this task on your base VM image
 # -----------------------------------------------------------------------------------------------------------------------------------
 
 ssh exam-1

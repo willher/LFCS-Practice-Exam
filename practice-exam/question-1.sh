@@ -4,7 +4,6 @@
 # 1. Set a limit on the number of processes users of the 'developer' group can start to 20.  
 # 2. Ensure that user 'Bob' who is a member of the 'developer' group is not impacted by these limits. 
 #
-# NOTE: there is no bash script for this questions.  You can perform this task on your base VM image
 # ---------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 vi /etc/security/limits.conf 
